@@ -38,7 +38,12 @@ public class PaymentController {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public Response getAll() {
-        return Response.ok().build();
+        return Response.ok()
+        .entity(paymentUsecase.getAllPayments()
+            .stream()
+            .map(PaymentMapper::toDto)
+            .toList())
+        .build();
     }
 
 

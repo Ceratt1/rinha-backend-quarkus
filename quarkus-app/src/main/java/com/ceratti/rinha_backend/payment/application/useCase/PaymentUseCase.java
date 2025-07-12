@@ -1,5 +1,7 @@
 package com.ceratti.rinha_backend.payment.application.useCase;
 
+import java.util.List;
+
 import com.ceratti.rinha_backend.payment.domain.models.Payment;
 import com.ceratti.rinha_backend.payment.domain.repositories.PaymentRedisRepository;
 
@@ -17,6 +19,9 @@ public class PaymentUseCase {
         return redisRepository.save(payment);
     }
 
+    public List<Payment> getAllPayments() {
+        return redisRepository.getAll();
+    }
 
     
 }
