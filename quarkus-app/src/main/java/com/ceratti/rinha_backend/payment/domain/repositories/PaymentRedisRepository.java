@@ -13,6 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+import java.util.concurrent.ConcurrentLinkedDeque;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 @ApplicationScoped
 public class PaymentRedisRepository {
@@ -30,6 +32,7 @@ public class PaymentRedisRepository {
         valueCommands().set(key, jsonValue);
         return payment;
     }
+
 
     public Optional<Payment> getById(UUID correlationId) {
         String key = correlationId.toString();
