@@ -5,10 +5,10 @@ import java.util.List;
 import com.ceratti.rinha_backend.payment.domain.models.Payment;
 import com.ceratti.rinha_backend.payment.domain.repositories.PaymentRedisRepository;
 
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
-@RequestScoped
+@ApplicationScoped
 public class PaymentUseCase {
 
     @Inject

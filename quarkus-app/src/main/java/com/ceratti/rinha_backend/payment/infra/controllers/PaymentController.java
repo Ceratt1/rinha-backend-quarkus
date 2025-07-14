@@ -1,4 +1,4 @@
-package com.ceratti.rinha_backend.payment.infra;
+package com.ceratti.rinha_backend.payment.infra.controllers;
 
 import com.ceratti.rinha_backend.payment.application.useCase.PaymentUseCase;
 import com.ceratti.rinha_backend.payment.domain.dto.PaymentRequestModel;
